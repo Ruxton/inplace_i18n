@@ -1,0 +1,50 @@
+jQuery ($) ->
+  addTranslationButton()
+  registerTranslationClick()
+
+addTranslationButton = () ->
+  $('body').append '<div id="inplace_i18n">Edit Translations</div>'
+  target = $('#inplace_i18n')
+  target.on 'click', (e) ->
+    e.preventDefault
+    $('span.inplace_i18n').toggle()
+
+inplaceI18nUrl = (key) ->
+  <%
+    path = InplaceI18n::Engine.routes.url_helpers.translation_path('1')
+  %>
+  url = '<%= path %>'
+  url = url.replace('/1','/'+key)
+  return url
+
+updateTranslation = (key,value) ->
+
+  url = inplaceI18nUrl(key)
+
+  if value? and key?
+    request = $.ajax
+      type: "PUT"
+      url: url
+      data:
+        value: value
+
+      async: true
+      success: ->
+        console.log 'Success'
+
+      error: ->
+        alert "error posting data to url:" + url
+
+registerTranslationClick = () ->
+  $('span.inplace_i18n').on 'click', (e) ->
+    e.preventDefault()
+    key = e.srcElement.id
+    url = inplaceI18nUrl(key)
+
+    request = $.ajax
+      type: "GET"
+      url: url
+
+    request.success (msg) ->
+      a = prompt('Translation',request.responseText)
+      updateTranslation(key,a)
