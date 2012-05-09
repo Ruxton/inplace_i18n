@@ -4,9 +4,6 @@
 
 Add/Edit Translations inside your application by using this gem and mounting its rails engine.
 
-Implementation idea & some code adopted from [i18n_locale_editor](http://github.com/n1k/i18n_locale_editor/)
-Edit icon c/o [FamFam Silk Iconset](http://www.famfamfam.com/lab/icons/silk/)
-
 It makes a few assumptions:
 * you use **yaml for translations**
 * your **translations are stored in [locale].yml**
@@ -55,6 +52,14 @@ If you have translations inside the attributes of a HTML Element, pass inplace: 
     image_tag 'awesome-image.png', alt: t('.awesome_image_alt', inplace: false)
 
 
+## Thanks, Kudos & Legalities
+
+* Implementation idea & some code adopted from [i18n_locale_editor](http://github.com/n1k/i18n_locale_editor/)
+* Edit icon c/o [FamFam Silk Iconset](http://www.famfamfam.com/lab/icons/silk/)
+
+## Copyright
+
+Copyright (c) 2011 [Gregory Tangey](http://ignite.digitalignition.net/). See LICENSE for details.
 
 
 
