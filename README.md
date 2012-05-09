@@ -45,7 +45,7 @@ Finally, mount the engine somewhere in your applications config/routes.rb file:
 
     mount InplaceI18n::Engine => '/translate'
 
-A RED box will show up in the top right hand corner of your site, clicking it will overlay pencil icons above every translation.  Clicking on the pencil will allow you to edit that translation.
+An 'Edit Translations' button will show up in the top right hand corner of your site, clicking it will overlay pencil icons above every translation.  Clicking on the pencil will allow you to edit that translation.
 
 If you have translations inside the attributes of a HTML Element, pass inplace: false as an option to the translation and the editor wont be added for that translation.  Currently adding it these will cause your HTML to break.
 
