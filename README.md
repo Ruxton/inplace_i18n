@@ -21,7 +21,7 @@ I hate trawling through translation files.
 Using inplace_i18n with rails is pretty straight forward, drop this into your Gemfile:
 
     group :development do
-      gem 'inplace_i18n', git: git@github.com:Ruxton/inplace_i18n.git
+      gem 'inplace_i18n', git: 'git://github.com/Ruxton/inplace_i18n.git'
     end
 
 Then add the javascript and stylesheets to your project, there are 2 helper methods for this.  In your head place the stylesheet:
