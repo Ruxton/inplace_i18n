@@ -13,7 +13,7 @@ It makes a few assumptions:
 
 It does a few things you might not like:
 * it re-arranges your [locale].yml alphabetically by key
-
+* there's ZERO security, anyone can and will play with your translations. Don't be a production dummy.
 
 ## Why?
 
