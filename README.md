@@ -2,7 +2,7 @@
 
 ## About
 
-Add/Edit Translations inside your application by using this gem and mounting it's rails engine.
+Add/Edit Translations inside your application by using this gem and mounting its rails engine.
 
 It makes a few assumptions:
 * you use **yaml for translations**
